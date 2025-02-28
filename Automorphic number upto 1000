@@ -1,0 +1,25 @@
+class Main {
+    public static void main(String[] args) {
+       
+     for(int  n=1;n<=1000;n++){
+       int  sqrt=n*n;
+      int original=n;
+    
+       boolean flag=true;
+     
+       while (n > 0) {
+            if (n % 10 != sqrt % 10) {
+                
+                flag=false; 
+                break;
+            }
+         sqrt/=10;
+       n/=10;}
+       
+       if(flag){
+           System.out.println(original+" ");
+       }n=original;
+   }
+       
+    }
+}
