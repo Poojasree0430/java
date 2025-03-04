@@ -1,0 +1,16 @@
+class Main{
+    public static void main(String[] args){
+        String n="Encapsulation";
+        String substr=n.substring(0,7);
+        System.out.println(substr);
+
+        StringBuilder s=new StringBuilder(n);
+        String sub=s.substring(0,4);
+        System.out.println(sub);
+
+        StringBuffer b=new StringBuffer(n);
+         String a=b.substring(0,5);
+        System.out.println(a);
+
+    }
+}
