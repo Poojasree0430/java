@@ -1,0 +1,57 @@
+
+class Main{
+    public static void stringbuilder(String n) {
+
+        StringBuilder s = new StringBuilder(n);
+
+        String Reverse = s.reverse().toString();
+        if (Reverse.equals(n)) {
+            System.out.println("Palindrome");
+        } else {
+            System.out.println("Not aPalindrome");
+        }
+    }
+
+    public static void stringbuffer(String a) {
+
+        StringBuffer s = new StringBuffer(a);
+
+        String Reverse = s.reverse().toString();
+        if (Reverse.equals(a)) {
+            System.out.println("Palindrome");
+        } else {
+            System.out.println("Not aPalindrome");
+        }
+    }
+    public static void string(String b) {
+        String rev = "";
+
+
+        for (int i = b.length() - 1; i >= 0; i--) {
+            rev += b.charAt(i);
+        }
+
+        if (rev.equals(b)) {
+            System.out.println(b + " is a Palindrome");
+        } else {
+            System.out.println(b + " is Not a Palindrome");
+        }
+    }
+
+
+
+
+
+    public static void main(String[] args) {
+        String n = "madam";
+        String a = "123";
+            String b= "567!";
+       stringbuilder(n);
+        stringbuffer(a);
+        string(b);
+
+
+    }}
+
+
+
