@@ -1,0 +1,38 @@
+
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        
+        String s1 = sc.nextLine();
+        String s2 = sc.nextLine();
+        
+        
+        if (s1.length() != s2.length()) {
+            System.out.println("NO");
+            return;
+        }
+        
+        
+        int[] Count1 = new int[26];
+        int[] Count2 = new int[26];
+        
+        
+        for (int i = 0; i < s1.length(); i++) {
+            Count1[s1.charAt(i) - 'a']++;
+            Count2[s2.charAt(i) - 'a']++;
+        }
+        
+      
+        for (int i = 0; i < 26; i++) {
+            if (Count1[i] != Count2[i]) {
+                System.out.println("NO");
+                return;
+            }
+        }
+        
+       
+        System.out.println("YES");
+    }
+}
