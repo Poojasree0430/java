@@ -1,0 +1,52 @@
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner scn=new Scanner(System.in);
+        int n=scn.nextInt();
+        int a[][]=new int [n][n];
+        int k=1,i,j;
+        for( i=0;i<n;i++,System.out.println()){
+            for( j=0;j<n;j++,System.out.print(" ")){
+                a[i][j]=k++;
+                System.out.print(a[i][j]);
+            }}
+        //--------------transpose ---------
+        System.out.println("transpose");
+        for( i=0;i<n;i++){
+            for( j=i+1;j<n;j++) {
+                int temp= a[i][j];
+                a[i][j]=a[j][i];
+                a[j][i]=temp;
+
+            }
+        }
+        for(i=0;i<n;i++){
+            for(j=0;j<n;j++){
+                System.out.print(a[i][j]+" ");
+            }
+            System.out.println();
+
+        }
+
+    //-------reverse-----------clockwise 90 degree----
+        System.out.println("reverse");
+        for(i=0;i<n;i++){
+            int start=0;
+            int end=n-1;
+            while(start<end){
+                int temp=a[i][start];
+                a[i][start]=a[i][end];
+                a[i][end]=temp;
+                start++;
+                end--;
+            }}
+        for(i=0;i<n;i++){
+            for(j=0;j<n;j++){
+            System.out.print(a[i][j]+" ");
+            }
+            System.out.println();
+
+        }
+    }}
+
