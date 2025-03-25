@@ -1,0 +1,10 @@
+class gcd{
+     public static void main(String[] args) {
+        int a=124,b=13;
+while(b!=0){
+int temp=b;
+b=a%b;
+a=temp;}
+System.out.print(a);
+ }
+}
