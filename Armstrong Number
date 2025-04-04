@@ -1,0 +1,28 @@
+//---------Armstrong-------
+
+class Armstrong{
+    public static int digit(int n){
+
+        int count=0;
+        while(n>0){
+            int digit=n%10;
+            count++;
+            n=n/10;}
+        return count;}
+
+
+    public static void main(String[] args){
+        int n=12345;
+        int countdigit=digit(n);
+        int temp=n;
+        int sum=0;
+        while(temp>0){
+            int pow=1;
+            int digit=temp%10;
+            for(int i=0;i<countdigit;i++){
+                pow*=digit;}
+            sum+=pow;
+            temp/=10;}
+        System.out.print(sum==n?"Armstrong":"Not");
+    }
+}
