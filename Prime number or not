@@ -1,0 +1,16 @@
+class Main{
+    public static void main(String[] args) {
+        boolean isprime=true;
+        int n=8;
+        if(n<2) {
+            isprime = false;
+        }
+        else if(n==2){
+            isprime=true;
+        }
+        else if(n%2==0){
+            isprime=false;
+        }
+        System.out.print(isprime);
+
+    }}
