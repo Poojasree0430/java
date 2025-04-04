@@ -1,0 +1,12 @@
+class Main{
+    public static void main(String[] args){
+        int n=18,org=n;
+        int rem=0,sum=0;
+        while(org>0){
+            rem=org%10;
+            sum=sum+rem;
+            org=org/10;
+        }
+        System.out.println(n%sum==0?"goodnumber":"badnumber");
+    }
+}
