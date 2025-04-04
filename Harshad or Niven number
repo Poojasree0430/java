@@ -1,0 +1,17 @@
+/---------------------Harshad-------
+
+class Main{
+    public static void main(String[] args){
+        int n=18;
+        int digit=0,sum=0;
+        while(n>0){
+           digit=n%10;
+           sum+=digit;
+           n=n/10;
+        }
+
+            System.out.print(n%sum==0?"Harshad":"not");
+
+
+    }
+}
