@@ -1,0 +1,28 @@
+
+class Main{
+    public static void main(String[] args){
+        String name="BASKAR";
+        int n=name.length();
+        if(name.matches(".*[a-z].*")&&name.matches(".*\\d.*")){
+            System.out.println("Invalid Input");
+        }
+       if(n<3){
+           System.out.println("No");
+       }
+
+        boolean first=(name.charAt(0)=='B'||name.charAt(0)=='L');
+        boolean last=(name.charAt(n-1)=='R'||name.charAt(n-1)=='E');
+
+        boolean mid=false;
+        for(int i=0;i<n-1;i++){
+           if(name.charAt(i)=='K');
+           mid=true;
+        }
+        if(first&&last&&mid){
+            System.out.println("Yes");
+        }else{
+            System.out.println("No");
+        }
+
+    }
+}
