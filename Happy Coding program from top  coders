@@ -1,0 +1,22 @@
+
+class Main{
+    public static void main(String[] args){
+        int n=10,m1=2,m2=5;
+        for(int i=1;i<=n;i++){
+            if(i%m1==0&&i%m2==0){
+                String s3="happycoding";
+                System.out.print(s3);
+            }
+            else if(i%m1==0){
+             String  s1="happy";
+                System.out.print(s1);
+            }
+            else if(i%m2==0){
+                String  s2="coding";
+                System.out.print(s2);
+            }else{
+                System.out.print(i);
+            }
+
+    }
+}}
