@@ -1,0 +1,32 @@
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner scn=new Scanner(System.in);
+        System.out.println("Enter the no of courses:");
+        int n=scn.nextInt();
+        if(n<=0){
+            System.out.println("Inavalid Input");
+            return;
+        }
+        scn.nextLine();
+        System.out.println("Enter course name:");
+        String[] a=new String[n];
+        for(int i=0;i<n;i++){
+           a[i]=scn.nextLine();
+        }
+        System.out.println("Enter the course to be selected:");
+        String course=scn.nextLine();
+        boolean found=false;
+        for(int i=0;i<a.length;i++){
+        if(course.equals(a[i])){
+            found=true;
+            break;
+        }}
+        if(found){
+            System.out.println(course+" is available");
+        }else{
+            System.out.println(course+" is not available");
+        }
+
+    }
+}
