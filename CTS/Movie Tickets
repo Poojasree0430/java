@@ -1,0 +1,39 @@
+
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner scn=new Scanner(System.in);
+        System.out.println("Enter the number of tickets: ");
+        int n=scn.nextInt();
+        scn.nextLine();
+        System.out.println("Do you want refreshment:");
+        String s=scn.nextLine();
+        System.out.println("Do you want coupen code:");
+        String t=scn.nextLine();
+        System.out.println("Enter the circle:");
+        String circle=scn.nextLine();
+       double price=0;
+        if(circle.equalsIgnoreCase("k")){
+        int cost=75;
+        price=n*cost;
+        }else if(circle.equalsIgnoreCase("q")) {
+            int cost = 150;
+            price=n*cost;
+        }else{
+            System.out.println("Invalid Input");
+        }
+        if(n>20){
+        double result=price*0.10;
+           price-=result;
+        }
+        if(t.equalsIgnoreCase("yes")){
+            double ans=price*0.02;
+            price-=ans;
+        }
+        if(s.equalsIgnoreCase("yes")){
+           price+=n*50;
+        }
+        System.out.println(price);
+
+    }
+}
