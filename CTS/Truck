@@ -1,0 +1,24 @@
+import java.util.*;
+class Main{
+public static void main(String[] args){
+    Scanner scn=new Scanner(System.in);
+    System.out.println("Enter the litres");
+    double l=scn.nextDouble();
+    System.out.println("Enetr distance");
+    double d=scn.nextDouble();
+    if(l<=0||d<=0){
+        System.out.println("Invalid Input");
+
+    }
+    double litresper100KM=(l/d)*100;
+    double miles = d * 0.6214;
+    double gallons = l * 0.2642;
+    double milespergallons=miles/gallons;
+    System.out.println("Litresper100KM");
+    System.out.printf("%.2f\n",litresper100KM);
+
+
+    System.out.println("MilesperGallons");
+    System.out.printf("%.2f\n",milespergallons);
+    }
+}
