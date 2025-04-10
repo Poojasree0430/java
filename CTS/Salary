@@ -1,0 +1,29 @@
+import java.util.*;
+public class IncrementCalculation {
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the salary");
+        int s=sc.nextInt();
+        System.out.println("Enter the aprisal");
+        double aprisal=sc.nextDouble();
+        int result=Main(aprisal, s);
+        System.out.println(result);
+    }
+        public static int Main(double aprisal,int s){
+        if(aprisal>=1&&aprisal<=3){
+            s+=s*0.10;
+
+        }else if(aprisal>=3.1&&aprisal<=4){
+            s+=s*0.25;
+
+        }else if(aprisal>=4.1&&aprisal<=5) {
+            s+=s*0.30;
+
+        }else{
+            System.out.println("Invalid Input");
+        }
+
+return s;
+        }
+    }
+
