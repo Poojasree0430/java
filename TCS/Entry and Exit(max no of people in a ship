@@ -1,0 +1,14 @@
+class TCS{
+    public static void main(String[] args){
+        int E[]={7,0,5,1,3};
+        int L[]={1,2,1,3,4};
+        int max=0,G=0;
+        for(int i=0;i<E.length;i++){
+                G+=E[i]-L[i];
+            if(G>max){
+                max=G;
+            }
+        }
+        System.out.println(max);
+    }
+}
