@@ -1,0 +1,32 @@
+import java.util.*;
+class TCS{
+    public static void main(String[] args){
+        Scanner scn=new Scanner(System.in);
+        System.out.println("Enter row:");
+        int r=scn.nextInt();
+        System.out.println("Enter cols");
+        int c=scn.nextInt();
+        System.out.println("Enter the elements");
+        int a[][]=new int[r][c];
+
+       for(int i=0;i<r;i++){
+            for (int j=0;j<c;j++){
+                 a[i][j]=scn.nextInt();
+            }}
+       int max=0,maxrow=0;
+        for(int i=0;i<r;i++){
+            int count=0;
+            for(int j=0;j<c;j++){
+                if(a[i][j]==1){
+                    count++;
+                }
+            }
+            if(count>max){
+            max=count;
+            maxrow=i+1;
+            }
+        }
+        System.out.println(maxrow);
+
+    }
+}
