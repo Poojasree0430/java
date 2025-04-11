@@ -1,0 +1,24 @@
+import java.util.*;
+class TCS{
+    public static void main(String[] args){
+        Scanner scn=new Scanner(System.in);
+        System.out.println("Enter N");
+        int n=scn.nextInt();
+        int k=5;//---minimum candies in a jar
+        int org=n;
+        System.out.println("Enter the no of candies");
+        int c=scn.nextInt();
+        if(c>org){
+            System.out.println("Invalid Input");
+        }else{
+        int left=org-c;
+        System.out.println("Number of Candies Sold:"+c);
+        System.out.println("Number of candies Left:"+left);}
+
+        if(org<=k){
+            org=n;
+            System.out.println("Jar is full");
+        }
+
+    }
+}
