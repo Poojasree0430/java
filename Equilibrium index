@@ -1,0 +1,18 @@
+class TCS{
+    public static void main(String[] args){
+        int a[]={-7, 1, 5, 2, -4, 3, 0};
+        int lsum=0,rsum=0;
+        for(int i=0;i<a.length;i++){
+            rsum+=a[i];
+        }
+        for(int j=0;j<a.length;j++){
+            rsum-=a[j];
+            if(lsum==rsum){
+                System.out.println(j);
+                return;
+            }lsum+=a[j];
+        }
+        System.out.println(-1);
+
+    }
+}
