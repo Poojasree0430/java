@@ -1,0 +1,30 @@
+import java.util.*;
+class TCS{
+    public static void main(String[] args){
+        Scanner d=new Scanner(System.in);
+        System.out.println("Enter the no of Interior walls");
+        int in_walls=d.nextInt();
+        System.out.println("Enter the no of EXterior walls");
+        int out_walls=d.nextInt();
+        System.out.println("Enter the surface area for in_walls:");
+        double a[]=new double[in_walls];
+        for(int i=0;i<in_walls;i++){
+            a[i]=d.nextDouble();
+        }
+        System.out.println("Enter the surface area for out_walls:");
+        double b[]=new double[in_walls];
+        for(int i=0;i<out_walls;i++){
+            b[i]=d.nextDouble();
+        }double cost=0;
+        for(int i=0;i<in_walls;i++){
+           cost+=a[i]*18;
+
+        }double cost1=0;
+        for(int i=0;i<out_walls;i++){
+            cost1+=b[i]*12;
+        
+        }
+        double result=cost+cost1;
+        System.out.println("Total Cost:"+result);
+    }
+}
