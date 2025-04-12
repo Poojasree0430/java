@@ -1,0 +1,34 @@
+import java.util.*;
+class TCS{
+    public static void main(String[] args){
+        Scanner d=new Scanner(System.in);
+        System.out.print("Enter the Text:");
+        String text=d.nextLine();
+        System.out.println("Enter the key:");
+        int key=d.nextInt();
+        if (key<0||key>25) {
+            System.out.println("Invalid input");
+            return;
+        }    String Encrypted=" ";
+        for(int i=0;i<text.length();i++){
+            char ch=text.charAt(i);
+            if(ch>='A'&&ch<='Z'){
+                char newchar=(char)(((ch-'A'+key)%26)+'A');
+                Encrypted+=newchar;
+            }else if(ch>='a'&&ch<='z'){
+                char newchar=(char)(((ch-'a'+key)%26)+'a');
+                Encrypted+=newchar;}
+            else if(ch>='0'&&ch<='9'){
+                char newchar=(char)(((ch-'0'+key)%26)+'0');
+                Encrypted+=newchar;}
+            else{
+                Encrypted+=ch;
+            }
+
+            }
+        System.out.println(Encrypted);
+        }
+
+
+
+    }
