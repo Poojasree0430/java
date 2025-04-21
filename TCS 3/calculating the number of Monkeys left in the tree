@@ -1,0 +1,17 @@
+import java.util.*;
+class Monkey{
+public static void main(String[] args){
+Scanner d=new Scanner(System.in);
+System.out.println("Enter total no of Monkeys: ");
+int n=d.nextInt();
+System.out.println("Enter the Number of eatable Bananas by Single Monkey: ");
+int k=d.nextInt();
+System.out.println("Enter the Number of eatable Peanut by Single Monkey: ");
+int j=d.nextInt();
+System.out.println("Total no of Bananas:");
+int m=d.nextInt();
+System.out.println("Total no of Peanut:");
+int p=d.nextInt();
+int result=(n-((m/k)+(p/j)));
+System.out.println("Number of  Monkeys left on the tree:"+result);
+}}
