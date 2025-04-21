@@ -1,0 +1,26 @@
+import java.util.*;
+class Prime{
+public static void main(String[] args){
+Scanner d=new Scanner(System.in);
+System.out.println("Enter the number:");
+int n=d.nextInt();
+if(n<0){
+System.out.println("Enter Positive number");
+}else{
+System.out.println(isprime(n));
+}
+
+
+}
+public static boolean isprime(int n){
+if(n==2){
+return true;}
+if(n<2){
+return false;}
+if(n%2==0){
+return false;}
+
+return true;
+}
+
+}
