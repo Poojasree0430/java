@@ -1,0 +1,16 @@
+import java.util.*;
+class StrReplace{
+public static void main(String[] args){
+Scanner d=new Scanner(System.in);
+String s1=d.nextLine();
+String s2=d.nextLine();
+String s3=d.nextLine();
+
+
+String a=s1.replaceAll("[aeiou]","%");
+String b=s2.replaceAll("[^aeiou]","#");
+String c=s3.toUpperCase();
+
+
+System.out.println(a+b+c);
+}}
