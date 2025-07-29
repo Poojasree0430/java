@@ -1,0 +1,12 @@
+class Main{
+    public static void main(String[] args){
+        int n=5;
+        printnum(1,5);
+    }
+    public static void printnum(int current ,int n){
+if(current>n)
+    return;
+        System.out.println(current+" ");
+        printnum(current+1,n);
+    }
+}
