@@ -1,0 +1,51 @@
+class Main{
+    public static void main(String[] args){
+        String a="Hi";
+        String b="";
+        for(int i=0;i<a.length();i++){
+            char ch=a.charAt(i);
+            if(ch>='A'&& ch<='Z'){
+                b+=Character.toLowerCase(ch);
+            }else if(ch>='a'&&ch<='z'){
+                b+=Character.toUpperCase(ch);
+            }else{
+                b+=ch;
+            }
+        }System.out.print(b);
+    }
+}
+------------------------------
+class Main{
+    public static void main(String[] args){
+        String a="Hi_Ma";
+        String b="";
+        for(int i=0;i<a.length();i++){
+            char ch=a.charAt(i);
+            if(ch>='A'&& ch<='Z'){
+                b+=(char)(ch+32);
+            }else if(ch>='a'&&ch<='z'){
+                b+=(char)(ch-32);
+            }else{
+                b+=ch;
+            }
+        }System.out.print(b);
+    }
+}
+
+----------------------------
+class Main{
+    public static void main(String[] args){
+        String a="Hi";
+        String b="";
+        for(int i=0;i<a.length();i++){
+            char ch=a.charAt(i);
+            if(Character.isUpperCase(ch)){
+            b+=Character.toLowerCase(ch);
+            }else if(Character.isLowerCase(ch)){
+          b+=Character.toUpperCase(ch);
+            }else{
+                b+=ch;
+            }
+        }System.out.print(b);
+    }
+}
